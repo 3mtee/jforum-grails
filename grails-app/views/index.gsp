@@ -117,6 +117,9 @@
 					</g:each>
 				</ul>
 			</div>
+            <div>
+                <a href="http://localhost:8080/jforum">Proceed to forum</a>
+            </div>
 		</div>
 	</body>
 </html>
