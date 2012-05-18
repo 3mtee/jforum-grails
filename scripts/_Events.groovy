@@ -6,10 +6,7 @@ eventConfigureTomcat = {tomcat ->
     def contextRoot = ConfigurationHolder.config.grails.jforum.contextRoot
     def buildroot= ConfigurationHolder.config.grails.jforum.build.path
     def webroot  = ConfigurationHolder.config.grails.jforum.web.root
-    println(webroot)
     File appDir = new File(webroot);
-    println(appDir)
-    println(appDir.absolutePath)
     context = tomcat.addWebapp(contextRoot, appDir.getAbsolutePath());
     context.reloadable = true
 
