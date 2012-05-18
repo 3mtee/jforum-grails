@@ -98,3 +98,8 @@ log4j = {
 grails.plugins.springsecurity.userLookup.userDomainClassName = 'jforum.grails.User'
 grails.plugins.springsecurity.userLookup.authorityJoinClassName = 'jforum.grails.UserRole'
 grails.plugins.springsecurity.authority.className = 'jforum.grails.Role'
+
+
+grails.jforum.contextRoot = "/jforum"
+grails.jforum.web.root = "/home/emtee/software_development/apache-tomcat/webapps/jforum/"
+grails.jforum.build.path = "${grails.jforum.web.root}/WEB-INF/classes"
