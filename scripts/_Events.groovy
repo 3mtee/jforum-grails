@@ -2,7 +2,7 @@ import org.apache.catalina.loader.WebappLoader
 import org.codehaus.groovy.grails.commons.ConfigurationHolder
 
 eventConfigureTomcat = {tomcat ->
-    println "### Starting load of custom application"
+    /*println "### Starting load of custom application"
     def contextRoot = ConfigurationHolder.config.grails.jforum.contextRoot
     def buildroot= ConfigurationHolder.config.grails.jforum.build.path
     def webroot  = ConfigurationHolder.config.grails.jforum.web.root
@@ -16,5 +16,5 @@ eventConfigureTomcat = {tomcat ->
     context.loader = loader
     loader.container = context
 
-    println "### Ending load of custom application"
+    println "### Ending load of custom application"*/
 }

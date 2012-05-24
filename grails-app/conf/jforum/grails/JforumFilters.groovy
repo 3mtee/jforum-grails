@@ -8,7 +8,7 @@ class JforumFilters {
     def filters = {
         all(controller: '*', action: '*') {
             before = {
-
+                request.remoteUser
                 User user = springSecurityService.currentUser
 
                 if (user) {
