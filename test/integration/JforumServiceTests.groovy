@@ -9,7 +9,7 @@ class JforumServiceTests extends GroovyTestCase {
     def jforumService
 
     private String getUserEmail() {
-        def email = jforumService.getJforumUserEmail()
+        def email = jforumService.getJforumUserEmail(API_KEY)
         if (email.isEmpty()) {
             def created = jforumService.createJForumUser(API_KEY, USERNAME, EMAIL, PASSWORD)
             if (created) {
@@ -22,7 +22,7 @@ class JforumServiceTests extends GroovyTestCase {
     }
 
     void testUserRetrieval() {
-        def xml = jforumService.geJForumUserEmailXML()
+        def xml = jforumService.geJForumUserEmailXML(API_KEY)
         assert xml.@"response-code" == 'OK'
         def userCount = xml.users.@total
         assert userCount != null

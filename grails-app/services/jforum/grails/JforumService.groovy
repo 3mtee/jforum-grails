@@ -2,9 +2,9 @@ package jforum.grails
 
 class JforumService {
 
-    def getJforumUserEmail() {
+    def getJforumUserEmail(def apiKey) {
         def emailAddress = ''
-        def xml = geJForumUserEmailXML()
+        def xml = geJForumUserEmailXML(apiKey)
         def userCount = xml.users.@total
         for (int i = 0; i < userCount.toInteger(); i++) {
             def email = xml.users.user[i].@email
