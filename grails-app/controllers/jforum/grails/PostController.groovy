@@ -6,13 +6,7 @@ class PostController {
 
     static allowedMethods = [save: "POST", update: "POST", delete: "POST"]
 
-    def jforumService
-
     def index() {
-
-        jforumService.getInboxUnreadMessagesCount()
-        jforumService.getInboxTotalMessagesCount()
-        jforumService.createJForumUser()
 //        redirect(action: "list", params: params)
     }
 
