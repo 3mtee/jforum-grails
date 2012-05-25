@@ -103,3 +103,5 @@ grails.plugins.springsecurity.authority.className = 'jforum.grails.Role'
 grails.jforum.contextRoot = "/jforum"
 grails.jforum.web.root = "/home/emtee/software_development/workspace/idea/jforum2/target/jforum/"
 grails.jforum.build.path = "${grails.jforum.web.root}/WEB-INF/classes"
+
+grails.jforum.apikey = "qwerty"

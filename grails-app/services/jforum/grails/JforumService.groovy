@@ -38,7 +38,6 @@ class JforumService {
     }
 
     def getInboxUnreadMessagesCount(def apiKey, def email) {
-
         def xml = getInboxUnreadMessagesXML(apiKey, email)
         xml.messages.@total.toInteger()
     }

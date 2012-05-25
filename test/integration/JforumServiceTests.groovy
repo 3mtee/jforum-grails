@@ -44,7 +44,11 @@ class JforumServiceTests extends GroovyTestCase {
     void testSendPM() {
         def email = getUserEmail()
         def count = jforumService.getInboxTotalMessagesCount(API_KEY, email)
+        def start = System.currentTimeMillis()
         jforumService.sendPrivateMessage(API_KEY, 'Emtee', email, 'test', 'hi there')
+        def finish = System.currentTimeMillis()
+        def duration = finish - start
+        log.info("request duration (ms): " + duration)
         def newCount = jforumService.getInboxTotalMessagesCount(API_KEY, email)
         assertEquals count + 1, newCount
     }
