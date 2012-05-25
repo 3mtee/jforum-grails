@@ -1,5 +1,7 @@
+import org.codehaus.groovy.grails.commons.ConfigurationHolder as CH
+
 class JforumServiceTests extends GroovyTestCase {
-    private static final String API_KEY = 'qwerty'
+    private static final String API_KEY = CH.config.grails.jforum.apikey
     private static final String USERNAME = 'emtee'
     private static final String EMAIL = 'emtee@gmail.com'
     private static final String PASSWORD = 'test'

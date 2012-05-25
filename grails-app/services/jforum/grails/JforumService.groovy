@@ -18,10 +18,10 @@ class JforumService {
         return emailAddress
     }
 
-    def geJForumUserEmailXML() {
+    def geJForumUserEmailXML(def apiKey) {
         def xml = null
         withHttp(uri: "http://localhost:8080") {
-            xml = get(path: '/jforum/userApi/list/qwerty.page')
+            xml = get(path: '/jforum/userApi/list/' + apiKey +'.page')
         }
         xml
     }
